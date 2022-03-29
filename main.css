@@ -23,12 +23,7 @@
     --white-color: #fff;
     --black-color: #000;
   }
-  
-  .center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+
   /* End of Common Styles */
   
 
