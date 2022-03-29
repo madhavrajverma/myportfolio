@@ -1,0 +1,48 @@
+body{
+    background: linear-gradient(180deg, rgba(214, 236, 247, 0.21) 0%, rgba(242, 206, 146, 0.25) 100%) no-repeat;
+}
+
+
+.blog-container {
+    display: flex;
+  flex-direction: column;
+   align-items: center;
+   margin :4rem 10rem;
+   gap:4rem;
+}
+
+.img-container {
+    display: flex;
+    justify-content:center;
+}
+
+.img-banner{
+    width :80%;
+}
+
+.blog {
+    width:80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:2rem;
+
+}
+
+.heading {
+    font-size:  3rem;
+    color:#616166;
+}
+
+.paras {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:2rem;
+}
+.para {
+    font-size: 2rem;
+    letter-spacing: .1rem;
+    line-height: 1.5;
+    color:dimgray;
+}

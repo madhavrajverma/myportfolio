@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs</title>
+      <link rel="stylesheet" href="../main.css">
+      <link rel="stylesheet" href="blog-1.style.css">
+
+</head>
+<body>
+    <div class="container">
+        <section class="section-1">
+            <div class="nav">
+                <div class="logo">
+                 <a href="../index.html" class="logo">MRV</a>
+                </div>
+        
+                <nav class="nav-bar">
+                  <a href="../index.html" class="nav-link ">Home</a>
+                  <a href="../blog/blog.html" class="nav-link">Blogs</a>
+                  <a href="../projects/project.index.html" class="nav-link">Projects</a>
+                  <a href="../contactus/contact.html" class="nav-link cta-btn">Contact Me</a>
+                </nav>
+              </div>
+          </section>
+
+    </div>
+
+    <div class="blog-container">
+        <div class="img-container">
+            <img src="../images/swift-banner.png" class="img-banner" alt="">
+        </div>
+
+        <div class="blog">
+            <h1 class="heading">
+                All SwiftUI property wrappers explained and compared
+            </h1>
+<div class="paras">
+    <p class="para">
+        @AppStorage reads and writes values from UserDefaults. This owns its data. More info.
+
+    @Binding refers to value type data owned by a different view. Changing the binding locally changes the remote data too. This does not own its data. More info.
+    @Environment lets us read data from the system, such as color scheme, accessibility options, and trait collections, but you can add your own keys here if you want. This does not own its data. More info.
+    @EnvironmentObject reads a shared object that we placed into the environment. This does not own its data. More info.
+    @FetchRequest starts a Core Data fetch request for a particular entity. This owns its data. More info.
+    @FocusedBinding is designed to watch for values in the key window, such as a text field that is currently selected. This does not own its data.
+    </p>
+    <p class="para">
+        @Namespace creates an animation namespace to allow matched geometry effects, which can be shared by other views. This owns its data.
+        @NSApplicationDelegateAdaptor is used to create and register a class as the app delegate for a macOS app. This owns its data.
+        @ObservedObject refers to an instance of an external class that conforms to the ObservableObject protocol. This does not own its data. More info.
+        @Published is attached to properties inside an ObservableObject, and tells SwiftUI that it should refresh any views that use this property when it is changed. This owns its data. More info.
+        @ScaledMetric reads the user’s Dynamic Type setting and scales numbers up or down based on an original value you provide. This owns its data. More info.
+        @SceneStorage lets us save and restore small amounts of data for state restoration. This owns its data. More info.
+    
+    </p>
+    
+    <p class="para">
+        In comparison, @Binding is used for simple data that you want to change, but is not owned by your view. As an example, think of how the built-in Toggle switch works: it needs to move between on and off states, but it doesn’t want to store that value itself so instead it has a binding to some external value that we own. So, our view has an @State property, and the Toggle has an @Binding property.
+    
+    There is a variation of @State called @GestureState, specifically for tracking active gestures. This isn’t used so often, but it does have the benefit that it sets your property back to its initial value when the gesture ends.
+    
+    For more advanced purposes – i.e., dealing with classes, or sharing data in many places – you should not use @State and @Binding. Instead, you should create your object somewhere using @StateObject, then use it in other views with @ObservedObject.
+    
+    A simple rule is this: if you see “state” in the name of a property wrapper, it means that views definitely owns the data.
+    </p>
+
+    <p class="para">
+           
+    So, @State means simple value type data created and managed locally but perhaps shared elsewhere using @Binding, and @StateObject means reference type data created and managed locally, but perhaps shared elsewhere using something like @ObservedObject.
+    
+    This is important: if you ever see @ObservedObject var something = SomeType() it should almost certainly be @StateObject instead so that SwiftUI knows the view should own the data rather than just refer to it elsewhere. Using @ObservedObject here can sometimes cause your app to crash because the object is destroyed prematurely.
+    
+    If you find yourself handing the same data from view to view to view, you’ll find the @EnvironmentObject property wrapper useful. This lets you read a reference type object from a shared environment, rather than passing it around explicitly.
+    
+    Just like @ObservableObject, @EnvironmentObject should not be used to create your object initially. Instead, create it in a different view and use the environmentObject() modifier to inject it into the environment. Although the environment will automatically keep ownership of your object, you can also use @StateObject to store it wherever it was originally created. This is not required, though: putting an object into the environment is enough to keep it alive without further ownership.
+
+    </p>
+
+    <p class="para">
+        Storing long-term data
+        SwiftUI has three property wrappers designed to store and/or retrieve data.
+        
+        The first is @AppStorage, which is a wrapper around UserDefaults. Every time you read or write a value from app storage, you’re actually reading or writing from UserDefaults.
+        
+        The second is @SceneStorage, which is a wrapper around Apple’s state restoration APIs. State restoration is what allows an app to be closed and reloaded, and come back to the same state the user left off – it makes it look like our apps were always running, even though they were silently terminated.
+        
+        @AppStorage and @SceneStorage are not secure and should not be used to store sensitive data
+    </p>
+    <p class="para">
+ 
+    @Environment is used to read a wide variety of data such as what trait collection is currently active, whether they are using a 2x or 3x screen, what timezone they are on, and more. It also has a couple of special application actions, such as exporting files and opening a URL in the system-registered web browser.
+    
+    @ScaledMetric is much simpler, and lets us adapt the size of our user interface based on a user’s Dynamic Type settings. For example, a box that is 100x100 points might look great using the system default size, but with @ScaledMetric it will automatically become 200x200 when a larger Dynamic Type setting is enabled.
+    
+    Referring to views
+    SwiftUI has provides the @Namespace property wrapper, which creates a new namespace for animations. Animation namespaces let us say “animate views with an ID of 5”, and all views in that namespace with the ID 5 will be animated.
+    
+    You can share namespaces between views by using the property type Namespace.ID and injecting the @Namespace value from whichever view created it. This allows you to created matched geometry effect animations across views, rather than storing all the data in the current view.
+    </p>
+</div>
+        </div>
+        
+    </div>
+    
+
+  <footer class="footer">
+    <div class="social-media-icon">
+      <a href="" class="social-icon">
+        <img src="../images/twitter.png" class="social-image" alt="">
+      </a>
+      <a href="" class="social-icon">
+        <img src="../images/instagram.png" class="social-image" alt="">
+      </a>
+      <a href="" class="social-icon">
+        <img src="../images/linkedin.png" class="social-image" alt="">
+              </a>
+    </div>
+    <h3 class="copyright">Copyright © Madhav raj Verma</h3>
+  </footer>
+
+</body>
+</html>
