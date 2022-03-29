@@ -17,6 +17,85 @@ body{
 
 /* end of image Container */
 
+.wrap{
+    /* width: 30%; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  .search {
+    width: 30%;
+    position: relative;
+    display: flex;
+  }
+  
+  .searchTerm {
+    width: 100%;
+    border: 2px solid #9da5a7;
+    border-right: none;
+    padding: 2rem;
+    height: 2rem;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #9DBFAF;
+  }
+  
+  .searchTerm:focus{
+    color: #00B4CC;
+  }
+  
+  .searchButton {
+    width: 45px;
+    border: 1px solid #ff9966;
+    background: linear-gradient(90deg, #ff9966, #FFC107);
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 2rem;
+  }
+  
+
+  .genre-container{
+    /* width: 30%; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin:4rem 0 ;
+    
+  }
+
+  .genre {
+    display: flex;
+    position: relative;
+    display: flex;
+    gap:4rem;
+  }
+
+  .genre-item { 
+      padding: 1rem 2rem;
+      background: linear-gradient(90deg, #c86b3d, #85670e);
+      border-radius:.5rem;
+      font-size: 2rem;
+      color:white;
+      font-weight:bold;
+      letter-spacing: .1rem;
+      cursor: pointer;
+  }
+
+  .one {
+    background: linear-gradient(90deg, #41a4d1, #0e2a85);
+  }
+.two { 
+    background: linear-gradient(90deg, #41d1a1, #0e857b);
+}
+.three { 
+    background: linear-gradient(90deg, #d141d1, #550e85);
+}
 
 
 /*Blog Section */
@@ -131,82 +210,3 @@ body{
   /* end of pagination Section */
 
 
-  .wrap{
-    /* width: 30%; */
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    
-  }
-
-  .search {
-    width: 30%;
-    position: relative;
-    display: flex;
-  }
-  
-  .searchTerm {
-    width: 100%;
-    border: 2px solid #9da5a7;
-    border-right: none;
-    padding: 2rem;
-    height: 2rem;
-    border-radius: 5px 0 0 5px;
-    outline: none;
-    color: #9DBFAF;
-  }
-  
-  .searchTerm:focus{
-    color: #00B4CC;
-  }
-  
-  .searchButton {
-    width: 45px;
-    border: 1px solid #ff9966;
-    background: linear-gradient(90deg, #ff9966, #FFC107);
-    text-align: center;
-    color: #fff;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
-    font-size: 2rem;
-  }
-  
-
-  .genre-container{
-    /* width: 30%; */
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin:4rem 0 ;
-    
-  }
-
-  .genre {
-    display: flex;
-    position: relative;
-    display: flex;
-    gap:4rem;
-  }
-
-  .genre-item { 
-      padding: 1rem 2rem;
-      background: linear-gradient(90deg, #c86b3d, #85670e);
-      border-radius:.5rem;
-      font-size: 2rem;
-      color:white;
-      font-weight:bold;
-      letter-spacing: .1rem;
-      cursor: pointer;
-  }
-
-  .one {
-    background: linear-gradient(90deg, #41a4d1, #0e2a85);
-  }
-.two { 
-    background: linear-gradient(90deg, #41d1a1, #0e857b);
-}
-.three { 
-    background: linear-gradient(90deg, #d141d1, #550e85);
-}
