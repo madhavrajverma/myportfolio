@@ -512,7 +512,7 @@ input {
     }
   }
 
-  @media (max-width: 450px) {
+  @media (max-width: 480px) {
     html {
       font-size: 35%;
       overflow-x: hidden;
