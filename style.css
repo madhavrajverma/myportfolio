@@ -18,7 +18,6 @@
 }
 
 .hero-image {
-    transform: scale(0.8);
     -webkit-animation: mover 2s infinite  alternate;
     animation: mover 2s infinite  alternate;
 }
@@ -69,96 +68,58 @@
 /* skils-section */ 
 
 .section-2 {
-    background: url(images/bg-ellipse.png)    ; 
-    background-size: cover;  
     width: 100%;
-    height:100%; 
-}
+    height: 100%;
+    padding: 15rem 0 10rem 0;
+    background: linear-gradient(180deg, rgba(214, 236, 247, 0.21) 0%, rgba(242, 206, 146, 0.25) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .progress-bars-wrapper {
+    margin-bottom: 10rem;
+  }
+  
+  .progress-bar {
+    width: 60rem;
+    height: 2.8rem;
+    background-color: #ccc;
+    margin: 1.5rem 0;
+    border-radius: 0.3rem;
+    box-shadow: 0.2rem 0.2rem 1rem rgb(151, 150, 150);
+    position: relative;
+  }
+  
+  .progress-text {
+    position: absolute;
+    left: 1rem;
+    font-size: 2rem;
+    color: #fff;
+  }
+  
+  .progress-text span {
+    margin: 0 0.5rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+  
+  .progress-percent {
+    width: 0;
+    height: 100%;
+    background-color: #FFC107;
+    border-radius: 0.3rem;
+    transition: width 0.5s 0.5s ease-in-out;
+  }
 
-.skills-heading {
+
+  .section-heading {
     font-size:5rem;
     text-align: center;
-    padding-top: 5rem;
-    color: #6C6B67;
-}
-
-
-.skills-section {
-  
-    width: 100%;
-    height:100vh;
-    display: flex;
-    justify-content:space-between;
-    flex-wrap: wrap;
-    padding: 5rem 10rem;
-}
-  
-
-.card {
-    /* width:20%; */
-    height:40rem;
-    display:flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap:4rem;
-    padding:3rem  6rem;
-    background: linear-gradient(149.83deg, rgba(3, 169, 244, 0.6) -10.82%, #0086D4 49.66%, #2B44FF 94.01%);
-    box-shadow: 0px 30px 50px rgba(43, 68, 255, 0.25);
-    border-radius: 20px;
-    padding-left: 4rem;
-    transition: all .4s;
-    margin:2rem 0;
-}
-
-.card-2 {
-    align-self: center;
-}
-
-.card-3 {
-    align-self: flex-end;
-}
-
-.card:hover {
-    transform:  translateY(-10px) scale(1.09);
-    /* transform:; */
-}
-
-.skills {
-    display:flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap:2rem;
-    
-}
-
-.skill-head {
-    font-size:2rem;
-    text-transform: uppercase;
-    color: var(--white-color);
-    letter-spacing: .1rem;
-}
-
-.skill {
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:2rem;
-}
-
-.skill p {
-   
-    color: var(--white-color);
-    font-size:1.8rem;
-}
-
-.skill-icon {
-    width:40px;
-}
-
-.node-js-icon {
-    width:60px
-}
-
+     margin-bottom: 5rem;
+     color:#6C6B67;
+     text-transform: uppercase;
+  }
 /* end of skills Section*/
   
 /* project Section */
@@ -178,6 +139,7 @@
     text-align: center;
      margin-bottom: 5rem;
      color:#6C6B67;
+     text-transform: uppercase;
 }
 
 .projects {
@@ -336,7 +298,6 @@
     margin-top:2rem;
     gap:1.5rem;
     padding-right: 5rem;
-    
 }
 
 .title {
@@ -455,3 +416,51 @@ input {
 
 /* end of subscribe section */
 
+
+
+/* Responsive */
+@media (max-width: 1200px) {
+  */
+  }
+  
+  @media (max-width: 800px) {  
+    .progress-bar {
+      width: 50rem;
+    }
+  }
+  
+  @media (max-width: 600px) {
+
+    .section-2 {
+      padding: 10rem;
+    }
+  
+    .section-2-heading {
+      margin-bottom: 10rem;
+    }
+  
+  
+ 
+  }
+  
+  @media (max-width: 500px) {
+    html {
+      font-size: 55%;
+    }
+  }
+  
+  @media (max-width: 450px) {
+    html {
+      font-size: 45%;
+    }  
+
+    .section-2-heading {
+      text-align: center;
+    }
+  
+    .progress-bar {
+      width: 40rem;
+    }
+  }
+  /* End of Responsive */
+  

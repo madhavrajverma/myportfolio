@@ -55,7 +55,7 @@
     text-decoration: none;
     color: #000;
 }
-.nav-link {
+.navlink {
     font-size:1.6rem;
     font-weight: 800;
     text-transform:uppercase;
@@ -64,7 +64,7 @@
     transition :all .5s; 
 }
 
-.nav-link:hover {
+.navlink:hover {
     color: var(--primary-color);
 }
 
@@ -86,7 +86,6 @@
     transform: scale(1.05);
 }
 /* end of Nav Section */
-
 
 
   /* footer-section */
