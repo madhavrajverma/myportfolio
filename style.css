@@ -489,6 +489,78 @@ input {
       margin-bottom: 10rem;
     }
 
+    .section-hero {
+        flex-direction: column;
+        align-items:center;
+        gap:10rem;
+    }
+
+    .hero-item {
+        flex-direction: column;
+        align-items:center;
+    }
+
+      .intro {
+          font-size:3rem;
+          color:#47466C;
+      }
+      .name {
+          font-size:5rem;
+          color:var(--primary-color);
+          text-align: center;
+      }
+      .about {
+          font-size:1.8rem;
+          color:#979797;
+      }
+
+      .project-card {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+        padding-left: 3rem;   
+    }
+    .blogs {
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        gap:4rem;
+    }
+    
+    .blog {
+        flex-direction: column;
+    }
+    .blog-heading {
+        margin-left:2rem;
+    }
+    
+    .title {
+        font-size:2rem;
+    }
+    
+    .subtile {
+        font-size:1.5rem;
+    }
+
+      
+      .sell-all {
+          font-size:2.5rem;
+         
+      }
+
+      .form-input {
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    .subscribe-para{
+        text-align: center;
+    }
+
+    input {
+        width: 80%;
+    }
+    
+
  
   }
   
