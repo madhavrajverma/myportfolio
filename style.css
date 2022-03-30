@@ -588,12 +588,11 @@ input {
     
     .blog {
         flex-direction: column;
-        width:100%;
+        width:80%;
        
     }
     .blog img {
         width: 100%;
-        height:24rem;
     }
     .blog-heading {
         margin-left:2rem;
@@ -679,7 +678,7 @@ input {
     
     .blog {
         flex-direction: column;
-        width:100%;
+        width:80%;
     }
     .blog-heading {
         margin-left:2rem;
