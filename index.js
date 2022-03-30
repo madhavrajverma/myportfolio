@@ -23,13 +23,12 @@ window.addEventListener("resize", () => {
   window.location.reload();
 });
 
+var mobileNav = document.querySelector('.mobile-nav')
 
-// Navbar
-const menu = document.querySelector(".menu");
-const navbar = document.querySelector(".navbar");
+function myFunction() {
+  mobileNav.style.display = "block"
+}
 
-menu.addEventListener("click", () => {
-  navbar.classList.toggle("change");
-  menu.classList.toggle('change')
-});
-// End of Navbar
+document.querySelector('.back-btn').addEventListener('click', () => {
+    mobileNav.style.display = "none"
+})
