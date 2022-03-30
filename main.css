@@ -29,8 +29,13 @@
 
   /* Nav Section */
 
+  .container {
+    width: 100vw;
+  }
+
   .section-1 {
     margin: 0 10rem;
+    
       
   }
 

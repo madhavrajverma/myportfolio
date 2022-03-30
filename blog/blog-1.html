@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous">
     <title>Blogs</title>
       <link rel="stylesheet" href="../main.css">
       <link rel="stylesheet" href="blog-1.style.css">
@@ -12,18 +13,38 @@
 <body>
     <div class="container">
         <section class="section-1">
-            <div class="nav">
-                <div class="logo">
-                 <a href="../index.html" class="logo">MRV</a>
-                </div>
-        
-                <nav class="nav-bar">
-                  <a href="../index.html" class="nav-link ">Home</a>
-                  <a href="../blog/blog.html" class="nav-link">Blogs</a>
-                  <a href="../projects/project.index.html" class="nav-link">Projects</a>
-                  <a href="../contactus/contact.html" class="nav-link cta-btn">Contact Me</a>
-                </nav>
+          <div class="nav">
+            <div class="logo">
+             <a href="../index.html" class="logo">MRV</a>
+            </div>
+    
+            <nav class="nav-bar">
+              <a href="../index.html" class="navlink ">Home</a>
+              <a href="../blog/blog.html" class="navlink active">Blogs</a>
+              <a href="../projects/project.index.html" class="navlink">Projects</a>
+              <a href="../contactus/contact.html" class="navlink cta-btn">Contact Me</a>
+              <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+              </a>
+
+            </nav>
+            <nav class="mobile-nav">
+              <div class="back">
+                <i class=" back-btn fas fa-times"></i>
               </div>
+              <ul class="mobile-nav__items">
+                  <li class="mobile-nav__item">
+                      <a href="packages/index.html">Blogs</a>
+                  </li>
+                  <li class="mobile-nav__item">
+                      <a href="customers/index.html">Projects</a>
+                  </li>
+                  <li class="mobile-nav__item mobile-nav__item--cta">
+                      <a href="start-hosting/index.html">Contact Me</a>
+                  </li>
+              </ul>
+          </nav>
+          </div>
           </section>
 
     </div>
@@ -120,6 +141,6 @@
     </div>
     <h3 class="copyright">Copyright © Madhav raj Verma</h3>
   </footer>
-
+<script src="../index.js"></script>
 </body>
 </html>
