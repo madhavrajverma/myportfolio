@@ -81,3 +81,19 @@ textarea {
 
 }
 [type="submit"]:hover { background:#FFC107; }
+
+
+
+
+
+@media (max-width: 500px) {
+  .contact-container {
+    flex-direction: column;
+    gap:4rem;
+    margin: 4rem;
+}
+
+.form-container {
+  width:80%;
+}
+}

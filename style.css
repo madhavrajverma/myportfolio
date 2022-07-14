@@ -611,7 +611,7 @@ input {
     }
       
       .sell-all {
-          
+
           font-size:2rem;
          
       }
@@ -660,6 +660,9 @@ input {
     .hero-item {
         flex-direction: column;
         align-items:center;
+    }
+    .img-hero {
+        transition: scale(0.5);
     }
 
       .intro {
